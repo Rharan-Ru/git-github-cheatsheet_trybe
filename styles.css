@@ -97,7 +97,7 @@ img {
 
 @media only screen and (max-width: 600px) {
   .box {
-    background-color: black;
+    background-color: brown;
     display: flex;
     width: 100%;
     margin: 5px;
