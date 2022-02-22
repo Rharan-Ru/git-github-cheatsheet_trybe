@@ -178,88 +178,102 @@
           </p>
         </div>
       </section>
-      <div class="box" id="box01">
-        <h1>Criando Branches para adicionar funcionalidade</h1>
-        <p>
-          Utilizando o Git é possível criar diferentes ramificações do seu
-          código, tornando assim o processo de adicionar novas funcionalidades
-          mais fácil porque você não compromete a versão já em funcionamento pra
-          eventuais bugs. Veja como a seguir.
-        </p>
-        <h2>#8 Crie uma nova branch</h2>
-        <p>
-          Para criar uma nova branch (ramificação) do seu código você deve usar
-          o comando <em>git checkout -b -nomeDaNovaBranch-</em>. Utilizando o -b
-          você ganha tempo porque você estará ao mesmo tempo criando e entrando
-          na nova branch (diminuindo a margem para erro).
-        </p>
-        <img src="src/addbranchsupport.jpg" />
-        <small
-          >Quando devo criar branches? Ao adicionar funcionalidades novas ou
-          realizar testes.
-          <strong
-            >O propósito de uma branch é isolar o código do seu programa
-            principal e te fornecer uma versão editável do mesmo sem comprometer
-            o funcionamento do programa original.</strong
+      <section id="branch-commands">
+        <div class="box">
+          <h1>Criando Branches para adicionar funcionalidade</h1>
+          <p>
+            Utilizando o Git é possível criar diferentes ramificações do seu
+            código, tornando assim o processo de adicionar novas funcionalidades
+            mais fácil porque você não compromete a versão já em funcionamento
+            pra eventuais bugs. Veja como a seguir.
+          </p>
+          <h2>#8 Crie uma nova branch</h2>
+          <p>
+            Para criar uma nova branch (ramificação) do seu código você deve
+            usar o comando <em>git checkout -b -nomeDaNovaBranch-</em>.
+            Utilizando o -b você ganha tempo porque você estará ao mesmo tempo
+            criando e entrando na nova branch (diminuindo a margem para erro).
+          </p>
+          <img src="src/addbranchsupport.jpg" />
+          <small
+            >Quando devo criar branches? Ao adicionar funcionalidades novas ou
+            realizar testes.
+            <strong
+              >O propósito de uma branch é isolar o código do seu programa
+              principal e te fornecer uma versão editável do mesmo sem
+              comprometer o funcionamento do programa original.</strong
+            >
+          </small>
+        </div>
+        <div class="box">
+          <h2>
+            #9 Faça o commit normalmente e o push dessa vez para a nova branch:
+          </h2>
+          <img src="src/addbranchpush.jpg" />
+          <small
+            >Repare que o commit está sendo feito para a branch
+            addBranchTutorial e não para main</small
           >
-        </small>
-        <h2>
-          #9 Faça o commit normalmente e o push dessa vez para a nova branch:
-        </h2>
-        <img src="src/addbranchpush.jpg" />
-        <small
-          >Repare que o commit está sendo feito para a branch addBranchTutorial
-          e não para main</small
-        >
-        <h2>#10 Verifique as mudanças no GitHub</h2>
-        <img src="src/gitHubBranch.jpg" />
-        <p>
-          (1): Notificação que ocorreu um push recentemente em uma Branch<br /><br />
-          (2): Seletor de branch, onde você pode navegar livremente entre uma
-          branch e outra <br /><br />
-          (3): Contador de branches, que mostra quantas branches existem daquele
-          código naquele momento<br /><br />
-          (4): Botão de Pull Request, onde você pode realizar o merge
-          (literalmente a fusão) de dois branches quaisqueres.
-        </p>
-        <h2>#11 Realize o Merge da branch de nova função com a Main</h2>
-        <p>
-          Sua nova função está pronta, livre de bugs e otimizada? Realize o
-          Merge para que ela se integre com a Main clicando no botão Compare &
-          pull request
-        </p>
-        <img src="src/branchPullRequest.jpg" />
-        <p>
-          (1): Branch base - a que receberá o conteúdo. Para projetos
-          individuais será a main na maioria das vezes<br /><br />
-          (2): A branch de comparação - a que adicionará o seu conteúdo a branch
-          base. Para projetos individuais será a branch com a nova função ou
-          correção de bug, etc<br /><br />
-          (3): Verificador de merge automático. Dirá "Able to merge" em cor
-          verde se não houverem conflitos de fonte entre as branches<br /><br />
-          (4): Botão de criar pull request. Ao clicar nesse botão é solicitada a
-          fusão entre as duas branches.
-        </p>
-        <small>
-          A branch main é a origem da branch addBranchtutorial, e caso a branch
-          main tivesse sido editada antes do merge com a branch
-          addBranchTutorial, provavelmente ocorreria um conflito e o GitHub
-          solicitaria uma revisão manual.
-        </small>
-        <h2>#12 Confirmando o pull Request</h2>
-        <p>
-          Clicando no botão de criar pull request podemos solicitar a avaliação
-          de merge
-        </p>
-        <img src="src/mergepullrequest.jpg" />
-        <p>
-          Não tem segredo aqui. Se não há conflito entre as branches (e
-          provavelmente não haverá se você está desenvolvendo por conta própria)
-          é só clicar em Merge pull request e em confirm merge e as branchers
-          serão fundidas.
-        </p>
-        <h3>Parabéns, você adicionou uma nova funcionalidade na sua página!</h3>
-      </div>
+        </div>
+        <div class="box">
+          <h2>#10 Verifique as mudanças no GitHub</h2>
+          <img src="src/gitHubBranch.jpg" />
+          <p>
+            (1): Notificação que ocorreu um push recentemente em uma Branch<br /><br />
+            (2): Seletor de branch, onde você pode navegar livremente entre uma
+            branch e outra <br /><br />
+            (3): Contador de branches, que mostra quantas branches existem
+            daquele código naquele momento<br /><br />
+            (4): Botão de Pull Request, onde você pode realizar o merge
+            (literalmente a fusão) de dois branches quaisqueres.
+          </p>
+        </div>
+        <div class="box">
+          <h2>#11 Realize o Merge da branch de nova função com a Main</h2>
+          <p>
+            Sua nova função está pronta, livre de bugs e otimizada? Realize o
+            Merge para que ela se integre com a Main clicando no botão Compare &
+            pull request
+          </p>
+          <img src="src/branchPullRequest.jpg" />
+          <p>
+            (1): Branch base - a que receberá o conteúdo. Para projetos
+            individuais será a main na maioria das vezes<br /><br />
+            (2): A branch de comparação - a que adicionará o seu conteúdo a
+            branch base. Para projetos individuais será a branch com a nova
+            função ou correção de bug, etc<br /><br />
+            (3): Verificador de merge automático. Dirá "Able to merge" em cor
+            verde se não houverem conflitos de fonte entre as branches<br /><br />
+            (4): Botão de criar pull request. Ao clicar nesse botão é solicitada
+            a fusão entre as duas branches.
+          </p>
+          <small>
+            A branch main é a origem da branch addBranchtutorial, e caso a
+            branch main tivesse sido editada antes do merge com a branch
+            addBranchTutorial, provavelmente ocorreria um conflito e o GitHub
+            solicitaria uma revisão manual.
+          </small>
+        </div>
+        <div class="box">
+          <h2>#12 Confirmando o pull Request</h2>
+          <p>
+            Clicando no botão de criar pull request podemos solicitar a
+            avaliação de merge
+          </p>
+          <img src="src/mergepullrequest.jpg" />
+          <p>
+            Não tem segredo aqui. Se não há conflito entre as branches (e
+            provavelmente não haverá se você está desenvolvendo por conta
+            própria) é só clicar em Merge pull request e em confirm merge e as
+            branchers serão fundidas.
+          </p>
+        </div>
+        <div class="box">
+          <h3 style="text-align: center">
+            Parabéns, você adicionou uma nova funcionalidade na sua página!
+          </h3>
+        </div>
+      </section>
 
       <section id="moreToCome">
         <div class="special-box">
@@ -301,6 +315,7 @@
           fill="purple"
           class="bi bi-github"
           viewBox="0 0 16 16"
+          id="github-logo"
         >
           <path
             d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
