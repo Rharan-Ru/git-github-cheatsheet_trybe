@@ -6,113 +6,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ridley's Git-Github Cheatsheet</title>
     <link href="styles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
-    <header>Ridley's Git-Github Cheatsheet</header>
+    <header id="header">
+      <div id="content-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="purple" class="bi bi-git" viewBox="0 0 16 16">
+          <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.031 1.031 0 0 0 0-1.457"/>
+        </svg>
+        Ridley's Git-Github Cheatsheet
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="purple" class="bi bi-git" viewBox="0 0 16 16">
+          <path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.031 1.031 0 0 0 0-1.457"/>
+        </svg>
+      </div> 
+    </header>
+
     <main>
-      <section id="whatIsGit-Github">
-        <h1>Entendendo as diferenças</h1>
+      <section id="what-is-github">
+        <h1>#01 Entendendo as diferenças</h1>
         <p>Git: Ferramenta de versionamento de código.</p>
         <p>GitHub: empresa privada onde podem ser hospedados repositórios</p>
       </section>
-      <section id="basicCommands">
-        <h1>Criando um novo repositório e trabalhando SOLO</h1>
-        <h2>Entre na página do seu perfil e clique em New</h2>
-        <img
-          src="src/newRepository.jpg"
-          alt="localização do local do botão novo repositório"
-        />
-        <h2>Preencha os dados do seu repositório</h2>
-        <img src="src/newRepositoryBlock.jpg" />
-        <p>
-          (1): Permite que você adicione um arquivo README.md no seu
-          repositório. Esse arquivo é utilizado como capa para seu repositório
-          no GitHub. <strong>Crie sempre com README</strong> pois, além de ser
-          prático poder editar o README antes mesmo de começar a escrever seu
-          programa, ele inadvertidamente facilita os próximos passos.
-        </p>
-        <p>
-          (2): Permite que você adicione um arquivo .gitignore no seu
-          repositório. Esse é um arquivo de texto no qual você pode escrever
-          nomes de arquivos e diretórios que serão ignorados pelo gerenciamento
-          do Git.
-        </p>
-        <p>
-          (3): Permite que você escolha uma licença pela qual publicar seu
-          código. Licenças podem ser livres ou proprietárias. Não é interessante
-          no momento.
-        </p>
-        <h2>Clone o repositório</h2>
-        <img src="src/cloningRepository.jpg" />
-        <p>(1)Marque aqui para utilizar sua SSH</p>
-        <p>(2)Copie o código informado</p>
-        <p>
-          (3)Utilize o <em>comando git clone -link-</em> para clonar o
-          repositório remoto para sua máquina
-        </p>
-        <p>
-          Por que fazer dessa maneira: utilizando o comando clone ao invés de
-          dar <em>git init</em> e vincular o repositório remoto com
-          <em>git remote</em> você tem uma margem de erro muito menor.
-        </p>
-        <h2>
-          Parabéns, seu repositório do GitHub está vinculado a sua pasta local!
-        </h2>
-        <small
-          >Caso tenha problemas com autenticação verifique seu cadastro da SSH
-          seguindo o tutorial no final da página</small
-        >
-        <h2>Adicionando itens pra <em>Staging Area</em> do Git</h2>
-        <p>
-          Ao fazer qualquer alteração na pasta local, utilize o comando
-          <em>git status</em> para confirmar que o Git detectou a mudança.
-        </p>
-        <img src="src/gitStatus.jpg" />
-        <p>
-          Utilize o comando git add -nomeDoArquivo- para adicionar o arquivo a
-          <em>Staging Area</em> do Git
-        </p>
-        <small
-          >A <em>Staging Area</em> do git é o local no qual alterações são
-          preparadas para o <em>commit</em>. É possível utilizar
-          <em>git add .</em> para adicionar todos os arquivos no diretório
-          <b>que não estejam sendo ignorados pelo .gitignore</b>
-        </small>
-        <img src="src/git added.jpg" />
-        <h2>Realizando o <em>Commit</em></h2>
-        <p>
-          Utilize o comando <em>git commit -m "mensagem"</em> para realizar o
-          commit do seu repositório naquele determinado momento
-        </p>
-        <small
-          >O commit nada mais é do que uma "foto" tirada pelo Git para qual você
-          pode retornar a qualquer momento - um ponto de restauração de sistema,
-          digamos assim</small
-        >
-        <img src="src/gitCommited.jpg" />
-        <h2>Realizando o Push</h2>
-        <p>
-          Primeiro de tudo, assegure-se de qual o nome da sua branch principal.
-          Alguns sistemas utilizam a branch "Master" e alguns utilizam a branch
-          "Main". Ela será a branch principal do seu repositório, criada no
-          momento que você criou o próprio repositório.
-        </p>
-        <img src="src/whichBranch.jpg" />
-        <p>
-          Imagem: se você seguiu o tutorial a risca, a seta aponta para o nome
-          da sua branch main. Para garantir que sua branch principal ao criar um
-          novo repositório seja sempre main, utilize o comando
-          <em>git config --global init.defaultBranch main</em> no terminal.
-        </p>
-        <img src="src/gitpushed.jpg" />
-        <p>
-          Utilize o comando <em>git push origin -nomeDaSuaBranch-</em> para
-          enviar para o GitHub os dados da sua pasta local.
-        </p>
-        <h1>
-          Pronto! Seus dados serão enviados para o GitHub e podem ser
-          verificados diretamente no link do seu repositório.
-        </h1>
+
+      <section id="basic-commands">
+        <div class="box" id="box01">
+          <h1>#02 Criando um novo repositório e trabalhando SOLO</h1>
+          <h2>Entre na página do seu perfil e clique em New</h2>
+          <img
+            src="src/newRepository.jpg"
+            alt="localização do local do botão novo repositório"
+          />
+        </div>
+        
+        <div class="box" id="box02">
+          <h2>#03 Preencha os dados do seu repositório</h2>
+          <img src="src/newRepositoryBlock.jpg" />
+            <ol type="1">
+              <li>
+                Permite que você adicione um arquivo README.md no seu
+                repositório. Esse arquivo é utilizado como capa para seu repositório
+                no GitHub. <strong>Crie sempre com README</strong> pois, além de ser
+                prático poder editar o README antes mesmo de começar a escrever seu
+                programa, ele inadvertidamente facilita os próximos passos.
+              </li>
+              <br>
+              <li>
+                Permite que você adicione um arquivo .gitignore no seu
+                repositório. Esse é um arquivo de texto no qual você pode escrever
+                nomes de arquivos e diretórios que serão ignorados pelo gerenciamento
+                do Git.
+              </li>
+              <br>
+              <li>
+                Permite que você escolha uma licença pela qual publicar seu
+                código. Licenças podem ser livres ou proprietárias. Não é interessante
+                no momento.
+              </li>
+            </ol>
+        </div>
+        
+        <div class="box" id="box03">
+          <h2>#04 Clone o repositório</h2>
+          <img src="src/cloningRepository.jpg" />
+          <ol type="1">
+            <li>Marque aqui para utilizar sua SSH</li>
+            <br>
+            <li>Copie o código informado</li>
+            <br>
+            <li>Utilize o <em>comando git clone -link-</em> para clonar o repositório remoto para sua máquina</li>
+          </ol>
+          <p>
+            Por que fazer dessa maneira: utilizando o comando clone ao invés de
+            dar <em>git init</em> e vincular o repositório remoto com
+            <em>git remote</em> você tem uma margem de erro muito menor.
+          </p>
+          <hr style="background-color: white;">
+          <h2>
+            Parabéns, seu repositório do GitHub está vinculado a sua pasta local!
+          </h2>
+          <small
+            >Caso tenha problemas com autenticação verifique seu cadastro da SSH
+            seguindo o tutorial no final da página</small
+          >
+        </div>
+        
+        <div class="box" id="box04">
+          <h2>#05 Adicionando itens pra <em>Staging Area</em> do Git</h2>
+          <p>
+            Ao fazer qualquer alteração na pasta local, utilize o comando
+            <em>git status</em> para confirmar que o Git detectou a mudança.
+          </p>
+          <img src="src/gitStatus.jpg" />
+          <p>
+            Utilize o comando git add -nomeDoArquivo- para adicionar o arquivo a
+            <em>Staging Area</em> do Git
+          </p>
+          <small
+            >A <em>Staging Area</em> do git é o local no qual alterações são
+            preparadas para o <em>commit</em>. É possível utilizar
+            <em>git add .</em> para adicionar todos os arquivos no diretório
+            <b>que não estejam sendo ignorados pelo .gitignore</b>
+          </small>
+          <img src="src/git added.jpg" />
+        </div>
+        
+        <div class="box" id="box05">
+          <h2>#06 Realizando o <em>Commit</em></h2>
+          <p>
+            Utilize o comando <em>git commit -m "mensagem"</em> para realizar o
+            commit do seu repositório naquele determinado momento
+          </p>
+          <small
+            >O commit nada mais é do que uma "foto" tirada pelo Git para qual você
+            pode retornar a qualquer momento - um ponto de restauração de sistema,
+            digamos assim</small
+          >
+          <img src="src/gitCommited.jpg" />
+        </div>
+        
+        <div class="box" id="box06">
+          <h2>#07 Realizando o Push</h2>
+          <p>
+            Primeiro de tudo, assegure-se de qual o nome da sua branch principal.
+            Alguns sistemas utilizam a branch "Master" e alguns utilizam a branch
+            "Main". Ela será a branch principal do seu repositório, criada no
+            momento que você criou o próprio repositório.
+          </p>
+          <img src="src/whichBranch.jpg" />
+          <p>
+            Imagem: se você seguiu o tutorial a risca, a seta aponta para o nome
+            da sua branch main. Para garantir que sua branch principal ao criar um
+            novo repositório seja sempre main, utilize o comando
+            <em>git config --global init.defaultBranch main</em> no terminal.
+          </p>
+          <img src="src/gitpushed.jpg" />
+          <p>
+            Utilize o comando <em>git push origin -nomeDaSuaBranch-</em> para
+            enviar para o GitHub os dados da sua pasta local.
+          </p>
+        </div>
+        
+        <div class="special-box">
+          <p>
+            Pronto! Seus dados serão enviados para o GitHub e podem ser
+            verificados diretamente no link do seu repositório.
+          </p>
+        </div>
+        
       </section>
       <section id="creatingBranches">
         <h1>Criando Branches para adicionar funcionalidade</h1>
@@ -198,34 +238,32 @@
       </section>
 
       <section id="moreToCome">
+
         <h1>
           Será adicionado mais conteúdo aqui ao longo do curso de acordo com a
           necessidade das aulas.
         </h1>
       </section>
-      <section id="craftYourSSH">
+
+      <section id="craft-your-ssh">
         <h1>Não tem ainda o cadastro da sua SSH no GitHub?</h1>
-        <p>
-          1. Primeiro de tudo vamos criar a chave. ssh-keygen -t rsa -b 4096 -C
-          "seuemail@gmail.com" e saia dando enter até voltar terminar a criação
-          <br /><br />
-          2. Depois de criado, vamos pegar a chave para inserir no Github. cat
-          ~/.ssh/id_rsa.pub <br /><br />3. Se copiou tudo que apareceu no
-          terminal, é só adicionar
-          <a href="https://github.com/settings/ssh/new">nesse link</a>
-        </p>
+        <ol type="1">
+          <li>Primeiro de tudo vamos criar a chave. ssh-keygen -t rsa -b 4096 -C "seuemail@gmail.com" e saia dando enter até voltar terminar a criação .</li>
+          <br>
+          <li>Depois de criado, vamos pegar a chave para inserir no Github. cat ~/.ssh/id_rsa.pub .</li>
+          <br>
+          <li>Se copiou tudo que apareceu no terminal, é só adicionar <a href="https://github.com/settings/ssh/new">Nesse link</a>.</li>
+        </ol>
       </section>
+
     </main>
     <footer class="footer">
       <p>Copyright © 2022 Marcos Ridley</p>
-      <a href="https://github.com/MarcosRidley"
-        ><img
-          width="32"
-          height="32"
-          title=""
-          alt="Marcos Ridley's github page"
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFMTZCRDY3REIzRjAxMUUyQUQzREIxQzRENUFFNUM5NiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFMTZCRDY3RUIzRjAxMUUyQUQzREIxQzRENUFFNUM5NiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkUxNkJENjdCQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkUxNkJENjdDQjNGMDExRTJBRDNEQjFDNEQ1QUU1Qzk2Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+SM9MCAAAA+5JREFUeNrEV11Ik1EY3s4+ddOp29Q5b0opCgKFsoKoi5Kg6CIhuwi6zLJLoYLopq4qsKKgi4i6CYIoU/q5iDAKs6syoS76IRWtyJ+p7cdt7sf1PGOD+e0c3dygAx/67ZzzPM95/877GYdHRg3ZjMXFxepQKNS6sLCwJxqNNuFpiMfjVs4ZjUa/pmmjeD6VlJS8NpvNT4QQ7mxwjSsJiEQim/1+/9lgMHgIr5ohuxG1WCw9Vqv1clFR0dCqBODElV6v90ogEDjGdYbVjXhpaendioqK07CIR7ZAqE49PT09BPL2PMgTByQGsYiZlQD4uMXtdr+JxWINhgINYhGT2MsKgMrm2dnZXgRXhaHAg5jEJodUAHxux4LudHJE9RdEdA+i3Juz7bGHe4mhE9FNrgwBCLirMFV9Okh5eflFh8PR5nK5nDabrR2BNJlKO0T35+Li4n4+/J+/JQCxhmu5h3uJoXNHPbmWZAHMshWB8l5/ipqammaAf0zPDDx1ONV3vurdidqwAQL+pEc8sLcAe1CCvQ3YHxIW8Pl85xSWNC1hADDIv0rIE/o4J0k3kww4xSlwIhcq3EFFOm7KN/hUGOQkt0CFa5WpNJlMvxBEz/IVQAxg/ZRZl9wiHA63yDYieM7DnLP5CiAGsC7I5sgtYKJGWe2A8seFqgFJrJjEPY1Cn3pJ8/9W1e5VWsFDTEmFrBcoDhZJEQkXuhICMyKpjhahqN21hRYATKfUOlDmkygrR4o4C0VOLGJKrOITKB4jijzdXygBKixyC5TDQdnk/Pz8qRw6oOWGlsTKGOQW6OH6FBWsyePxdOXLTgxiyebILZCjz+GLgMIKnXNzc49YMlcRdHXcSwxFVgTInQhC9G33UhNoJLuqq6t345p9y3eUy8OTk5PjAHuI9uo4b07FBaOhsu0A4Unc+T1TU1Nj3KsSSE5yJ65jqF2DDd8QqWYmAZrIM2VlZTdnZmb6AbpdV9V6ec9znf5Q7HjYumdRE0JOp3MjitO4SFa+cZz8Umqe3TCbSLvdfkR/kWDdNQl5InuTcysOcpFT35ZrbBxx4p3JAHlZVVW1D/634VRt+FvLBgK/v5LV9WS+10xMTEwtRw7XvqOL+e2Q8V3AYIOIAXQ26/heWVnZCVfcyKHg2CBgTpmPmjYM8l24GyaUHyaIh7XwfR9ErE8qHoDfn2LTNAVC0HX6MFcBIP8Bi+6F6cdW/DICkANRfx99fEYFQ7Nph5i/uQiA214gno7K+guhaiKg9gC62+M8eR7XsBsYJ4ilam60Fb7r7uAj8wFyuwM1oIOWgfmDy6RXEEQzJMPe23DXrVS7rtyD3Df8z/FPgAEAzWU5Ku59ZAUAAAAASUVORK5CYII="
-      /></a>
+      <a href="https://github.com/MarcosRidley">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="purple" class="bi bi-github" viewBox="0 0 16 16">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+      </a>
     </footer>
   </body>
 </html>
